@@ -10,7 +10,7 @@ RUN 		apt-get update && \
 		dpkg -i puppetlabs-release-pc1-"$UBUNTU_CODENAME".deb && \
 		rm puppetlabs-release-pc1-"$UBUNTU_CODENAME".deb && \
 		apt-get update && \
-		apt-get install --no-install-recommends -y puppet-agent="$PUPPET_AGENT_VERSION"-1"$UBUNTU_CODENAME" && \
+		apt-get install --no-install-recommends -y puppet-agent && \
 		apt-get remove --purge -y lsb-release wget && \
 		apt-get autoremove -y && \
 		apt-get clean && \
